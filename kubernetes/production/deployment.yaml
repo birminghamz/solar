@@ -6,7 +6,7 @@ metadata:
   name: solar-system
   namespace: testsolarsystem
 spec:
-  replicas: $ARGOCD_APP_replicas
+  replicas: $replicas
   selector:
     matchLabels:
       app: solar-system
