@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         name: solar-system
         ports:
-        - containerPort: 3000
+        - containerPort: 8000
           name: http
           protocol: TCP
         
