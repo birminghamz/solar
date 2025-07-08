@@ -6,7 +6,7 @@ metadata:
   name: solar-system
   namespace: testsolarsystem
 spec:
-  replicas: 2
+  replicas: _{_replicas_}_
   selector:
     matchLabels:
       app: solar-system
