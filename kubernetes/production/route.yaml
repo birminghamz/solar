@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: solar-route
+  namespace: testsolarsystem
+  labels:
+    app: solar-system
+    app.kubernetes.io/instance: solar-prod
+spec:
+  host: testsolarsystem.apps.k8dev.vailresorts.com
+  to:
+    kind: Service
+    name: solar-system
+    weight: 100
+  port:
+    targetPort: 8000
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
