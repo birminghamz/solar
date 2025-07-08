@@ -6,7 +6,7 @@ metadata:
   name: solar-system
   namespace: testsolarsystem
 spec:
-  replicas: '{{inputs.parameters.replicas}}'
+  replicas: $ARGOCD_ENV_replicas
   selector:
     matchLabels:
       app: solar-system
